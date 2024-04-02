@@ -1,6 +1,6 @@
 import 'mocha'
 
-import {Bytes, PrivateKey} from '@greymass/eosio'
+import {Bytes, PrivateKey} from '@wharfkit/antelope'
 import {strict as assert} from 'assert'
 import crypto from 'crypto'
 

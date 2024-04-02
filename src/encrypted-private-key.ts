@@ -12,7 +12,7 @@ import {
     PrivateKeyType,
     UInt8,
     UInt8Type,
-} from '@greymass/eosio'
+} from '@wharfkit/antelope'
 import {ProgressCallback, scrypt as scryptJs} from 'scrypt-js'
 import {AES_CBC} from '@greymass/miniaes'
 import {SecurityLevel, SecurityLevelType} from './security-level'

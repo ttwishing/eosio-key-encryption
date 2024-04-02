@@ -1,6 +1,6 @@
 import 'mocha'
 
-import {Bytes, PrivateKey, Serializer} from '@greymass/eosio'
+import {Bytes, PrivateKey, Serializer} from '@wharfkit/antelope'
 import {strict as assert} from 'assert'
 
 import {EncryptedPrivateKey} from '../src/encrypted-private-key'

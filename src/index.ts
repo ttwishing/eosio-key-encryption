@@ -1,4 +1,4 @@
-import {BytesType, PrivateKeyType} from '@greymass/eosio'
+import {BytesType, PrivateKeyType} from '@wharfkit/antelope'
 
 import {
     EncryptedPrivateKey,
