@@ -20,8 +20,8 @@
         "prepare": "make"
     },
     "dependencies": {
-        "@greymass/eosio": "^0.6.0",
         "@greymass/miniaes": "^1.0.0",
+        "@wharfkit/antelope": "^1.0.7",
         "asmcrypto.js": "^2.3.2",
         "scrypt-js": "^3.0.1",
         "tslib": "^2.1.0"
