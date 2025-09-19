@@ -1,7 +1,7 @@
 {
     "name": "@ttwishing/eosio-key-encryption",
     "description": "EOSIO private key en/decryption library",
-    "version": "1.2.1-rc.0",
+    "version": "1.2.1-rc.1",
     "homepage": "https://github.com/greymass/eosio-key-encryption",
     "license": "BSD-3-Clause",
     "main": "lib/eosio-key-encryption.js",
