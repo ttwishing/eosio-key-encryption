@@ -100,6 +100,7 @@ export class EncryptedPrivateKey implements ABISerializableObject {
     }
 
     async decrypt(password: BytesType, progress?: ProgressCallback) {
+        const startTotal = Date.now()
         const cbc = await CBC(
             Bytes.from(password),
             this.checksum,
@@ -107,11 +108,14 @@ export class EncryptedPrivateKey implements ABISerializableObject {
             (this.constructor as typeof EncryptedPrivateKey).scrypt!,
             progress
         )
+        const scryptTime = Date.now()
+        console.log(`SCrypt time: ${scryptTime - startTotal}ms`)
+        const startAES = Date.now()
         const data = cbc.decrypt(this.ciphertext.array)
-
+        console.log(`AES time: ${Date.now() - startAES}ms`)
         const key = new PrivateKey(this.type, Bytes.from(data))
         const checksum = getChecksum(key)
-
+        console.log(`Total time: ${Date.now() - startTotal}ms`)
         if (!this.checksum.equals(checksum)) {
             throw new Error('Invalid password')
         }
